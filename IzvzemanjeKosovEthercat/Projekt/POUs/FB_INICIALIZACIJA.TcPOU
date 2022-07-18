@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="FB_INICIALIZACIJA" Id="{0abcf521-4fc1-4e1c-9d15-e8080694b344}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_INICIALIZACIJA
+VAR_INPUT
+	b_SignalToTrig : BOOL;	
+	i_nKorak : INT;
+END_VAR
+VAR_OUTPUT
+	b_GibVIzhodisce : BOOL;
+	b_GibVPozicijoCakanjaKosa : BOOL;
+END_VAR
+VAR
+	initEdge: INT;
+	CLK: INT;
+	korak: INT;
+	Q: INT;
+	R_initEdge : R_TRIG;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//ob pritisku na Init tipko gre v izhodisce
+R_initEdge(CLK:=b_SignalToTrig);
+
+
+CASE korak OF
+	0:
+		IF R_initEdge.Q AND (i_nKorak <> 50) THEN
+		main.iKorak := -1;
+		END_IF;
+		korak := 10;
+	10:
+		
+		IF (main.iKorak = 50) AND R_initEdge.Q THEN	
+			main.iKorakRelativnegaPomika := -1;
+		END_IF
+	
+		IF main.iKorak = 100 THEN
+			korak := 0;
+		END_IF
+	
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="FB_INICIALIZACIJA">
+      <LineId Id="10" Count="19" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

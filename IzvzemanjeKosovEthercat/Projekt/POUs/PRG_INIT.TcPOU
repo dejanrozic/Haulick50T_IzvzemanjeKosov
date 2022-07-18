@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="PRG_INIT" Id="{5483ec78-59fd-4af6-a1b4-63ebbd26ad06}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_INIT
+VAR
+	init: INT;
+	initEdge : R_TRIG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//ob pritisku na Init tipko gre v izhodisce
+initEdge(CLK:=IO.bInit);
+
+
+CASE init OF
+	0:
+		IF initEdge.Q AND (main.iKorak <> 50) THEN
+		MAIN.iKorak := -1;
+		
+		END_IF;
+		init := 10;
+	10:
+		
+		IF (main.iKorak = 50) AND initEdge.Q THEN	
+			MAIN.iKorakRelativnegaPomika := -1;
+		END_IF
+	
+		IF main.iKorak = 100 THEN
+			init := 0;
+		END_IF
+	
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_INIT">
+      <LineId Id="6" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="21" Count="1" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="23" Count="4" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="32" Count="3" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
