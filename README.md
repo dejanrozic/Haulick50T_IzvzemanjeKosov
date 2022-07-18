@@ -1,2 +1,2 @@
 # Haulick50T_IzvzemanjeKosov
-Manipulacija izvzemanja kosov - Ettercat
+Manipulacija izvzemanja kosov - Ethercat
