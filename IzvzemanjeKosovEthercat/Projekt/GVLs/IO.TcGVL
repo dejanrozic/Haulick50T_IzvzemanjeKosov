@@ -9,7 +9,7 @@ VAR_GLOBAL
 	bZunanjiSignalTrigger AT %I* : BOOL;
 	bVakumOK AT %I* : BOOL;
 	bExternalCam AT %I* : BOOL;
-	bInit AT %I* : BOOL;
+	bInit AT %I* : BOOL;		//Tipka za HOMMING
 	
 	
 	//OUTPUTS
