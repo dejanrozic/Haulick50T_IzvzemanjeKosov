@@ -9,3 +9,4 @@ DEC	17489 (0x4451) "Encoder counter overflow monitoring" The encoder'sincrementa
 - Kako se aktivira točka za MC_CamIn (absolutna pozija master osi (enkoder)).
 -MC_CamIn (MC_StartMode)
 -MC_CamIN (St_CamInOptions -> kako vpisati parameter)
+-....
