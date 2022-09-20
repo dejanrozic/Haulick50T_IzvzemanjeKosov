@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <GVL Name="IO" Id="{726f07b7-113a-4d92-b105-0afaca3ef1a2}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	//INPUTS
+	///EL1252 DI0 - bzunanji triger
+	//		 DI1 - vakum OK	
+	bZunanjiSignalTrigger AT %I* : BOOL;
+	bVakumOK AT %I* : BOOL;
+	bExternalCam AT %I* : BOOL;
+	bInit AT %I* : BOOL;		//Tipka za HOMMING
+	
+	
+	//OUTPUTS
+		//EL2004
+	// Q0 - vakum
+	// Q1 - izpih
+	bVklopVakum AT %Q* : BOOL;
+	bVklopIzpih AT %Q* : BOOL;
+	
+	bVklopTekociTrak AT %Q* : BOOL;
+	bSistemOK AT %Q* : BOOL;
+	
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

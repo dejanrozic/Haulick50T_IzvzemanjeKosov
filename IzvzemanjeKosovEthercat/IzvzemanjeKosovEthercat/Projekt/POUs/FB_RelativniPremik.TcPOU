@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="FB_RelativniPremik" Id="{dacd9792-4ae2-4fda-819c-acaf2e328e08}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_RelativniPremik
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	iKorakRelativnegaPomika: INT;
+	iKorak: INT;
+	bVakumON: BOOL;
+	bManualTurnOnIzpih: BOOL;
+	b_errorNiIzdelkaNaPrijemalu: BOOL;
+	bSlaveMoveAbsolute: BOOL;
+	SlaveAbsoluteValue: INT;
+	rZeroAbsolutePosition: INT;
+	fbSlaveMoveAbsolute: INT;
+	Done: INT;
+	bSlaveMoveRelative: BOOL;
+	SlaveDistance: INT;
+	fbSlaveMoveRelative: INT;
+	bMoveRelative: BOOL;
+	redgeTrigg: INT;
+	Q: INT;
+	kotvkotu: INT;
+	kotvkotu2: INT;
+	bIzpihON: BOOL;
+END_VAR
+
+VAR_IN_OUT
+	Axes: AXIS_REF;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE iKorakRelativnegaPomika OF
+	-1: //absolute move to 0
+	iKorak := 100;
+		//VAKUM IN IZPIH 
+	bVakumON := TRUE;
+	bManualTurnOnIzpih := FALSE;
+	
+	b_errorNiIzdelkaNaPrijemalu := FALSE;
+	
+	IF bSlaveMoveAbsolute THEN
+		bSlaveMoveAbsolute := FALSE;
+	ELSE
+		SlaveAbsoluteValue :=rZeroAbsolutePosition;
+ 		bSlaveMoveAbsolute := TRUE;
+	END_IF
+	
+	IF fbSlaveMoveAbsolute.Done THEN
+		bSlaveMoveAbsolute := FALSE;
+		iKorakRelativnegaPomika := -10;
+	END_IF
+	(*
+	
+	
+	*)
+	
+	-10: //distance move to 150° - cakanje na komad
+	IF bSlaveMoveRelative THEN 
+		bSlaveMoveRelative := FALSE;
+	ELSE
+		SlaveDistance := 141;
+		bSlaveMoveRelative := TRUE;	
+	END_IF
+	
+	IF fbSlaveMoveRelative.Done THEN
+		bSlaveMoveRelative := FALSE;	
+		iKorakRelativnegaPomika := 5;
+	END_IF
+	
+	5://move to 180ž
+	
+	IF bMoveRelative OR redgeTrigg.Q OR kotvkotu.Q THEN
+		SlaveDistance := 30;
+		bSlaveMoveRelative := TRUE;
+		//bVakumON := FALSE;
+		bVakumON := NOT  TRUE;
+	END_IF;
+	
+	IF fbSlaveMoveRelative.Done THEN
+		bSlaveMoveRelative := FALSE;	
+		iKorakRelativnegaPomika := 10;
+		
+	END_IF
+	
+	10: //move to 0
+	//
+	IF kotvkotu2.Q THEN
+		SlaveDistance := -180;
+		bSlaveMoveRelative := TRUE;	
+	END_IF
+			
+
+	IF fbSlaveMoveRelative.Done THEN //nalaganje kosov na trak
+		bSlaveMoveRelative := FALSE;
+		iKorakRelativnegaPomika := 20;
+		//bVakumON := TRUE;
+        bIzpihON := TRUE;
+		bManualTurnOnIzpih:= TRUE;
+		bVakumON := NOT FALSE;
+	END_IF
+	
+	20:
+	SlaveDistance := 150;
+	bSlaveMoveRelative := TRUE;	
+	bIzpihON := FALSE;	
+	IF fbSlaveMoveRelative.Done THEN //pozicija za izvzemanje kosov
+		bSlaveMoveRelative := FALSE;
+		bMoveRelative := FALSE;
+		iKorakRelativnegaPomika := 5;
+				
+	END_IF
+	bManualTurnOnIzpih := FALSE;]]></ST>
+    </Implementation>
+    <LineIds Name="FB_RelativniPremik">
+      <LineId Id="10" Count="79" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

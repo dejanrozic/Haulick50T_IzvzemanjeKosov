@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="MAIN" Id="{28552854-0743-4901-b437-d05b228d2a92}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	nCounterValue AT %I* : UINT;
+	nCOunter1551 AT %I* : UDINT;
+	
+	// CAM
+	MASTERAXIS : AXIS_REF;
+	SLAVEAXIS :AXIS_REF;
+	MASTERENCODER: AXIS_REF;
+	
+	adsadd AT%I* : T_AmsNetIdArr;
+	
+	//NC - POWER
+	fbMaster_Power : MC_POWER;
+	fbSlave_Power : MC_POWER;
+	//NC - RESET
+	fbMaster_Reset : MC_Reset;
+	fbSlave_Reset : MC_Reset;
+	fbSoeSlave_Reset : FB_SoEReset;
+	
+	iKorak : INT := 100;
+	//NC - RESET AXIS
+	
+	//NC CAM IN&OUT
+	fbCamIn : MC_CamIn;
+	fbCamOut : MC_CamOut;
+	//NC CAM OUT
+	bCAMin : BOOL := FALSE;
+	bResetMaster : BOOL;
+	bResetSlave : BOOL;
+	bPowerMaster : BOOL;
+	bPowerSlave : BOOL;
+	
+	//
+	fbSlaveMoveAbsolute : MC_MoveAbsolute;
+	fbSlaveMoveRelative : MC_MoveRelative;
+	fbSlaveMoveRelative2 : MC_MoveRelative;
+	
+	bMasterAbsoluteMove: BOOL := FALSE;
+	
+	rMasterAngle AT %I* : LREAL ;
+
+	bSlaveMoveAbsolute : BOOL;
+	bCAMOut: BOOL;
+	
+	u_MasterEncoderValue AT %I* : UINT;
+	r_MasterAngle AT %I*: LREAL;
+	
+	bSlaveMoveRelative: BOOL;
+	bMoveRelative : BOOL;
+	SlaveDistance: LREAL;
+	iKorakRelativnegaPomika: INT;
+	SlaveRelativeSPeed: LREAL := 720;
+	
+	
+	//SLAVE ABSOLUTE POSTIION
+	rZeroAbsolutePosition : LREAL := 0;
+	
+	SlaveAbsoluteValue: LREAL;
+	redgeTrigg : R_TRIG;
+	PulzeQ1: TP;
+	PulzeQ2: TP;
+	bVakumON: BOOL;
+	bIzpihON: BOOL;
+	
+	realAngle AT %I*: LREAL;
+	
+	SlaveHomming : MC_HOME;
+	
+	goHome: BOOL;
+	
+	rAX5000Modulo AT %I* : LREAL;
+	
+	bManualTurnOnIzpih: BOOL;
+	
+	b_error : BOOL;
+	b_errorNiIzdelkaNaPrijemalu: BOOL;
+	b_errorManipulatorNeinicializiran : BOOL;
+	b_AX500_ch1_reset: BOOL;
+	
+	kotvkotu : R_TRIG;
+	kotvkotu2 : R_TRIG;
+	initEdge: R_TRIG;
+	
+	bSistemVNacinuRocno: BOOL;
+	bSlaveMoveRelative2: BOOL;
+	SlaveDistance2: LREAL;
+END_VAR
+
+VAR RETAIN PERSISTENT
+	aktivacija2tockovnegaizvzema: BOOL;
+	iCamCableID : INT;
+	init : INT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+redgeTrigg(CLK:=io.bZunanjiSignalTrigger);
+//kotvkotu(CLK:=r_MasterAngle > 259);
+//kotvkotu2(CLK:=r_MasterAngle > 259);
+
+kotvkotu(CLK:=r_MasterAngle > 120);
+kotvkotu2(CLK:=r_MasterAngle > 270);
+
+
+fbCamOut(Slave := SLAVEAXIS,
+			Execute := bCAMOut);
+			
+fbMaster_Reset(Axis:=MASTERAXIS,
+					Execute := bResetMaster);
+					
+fbSlave_Reset(Axis:=SLAVEAXIS,
+					Execute := bResetSlave);
+
+SLAVEAXIS.DriveAddress.NetID := F_CreateAmsNetId(nIds:= adsadd);
+					
+fbSoeSlave_Reset(Axis:=SLAVEAXIS, NetId := SLAVEAXIS.DriveAddress.NetID , Execute :=b_AX500_ch1_reset, Timeout := T#10S );	
+
+
+
+fbMaster_Power (Axis := MASTERAXIS,
+					Enable := bPowerMaster,
+					Enable_Positive := TRUE,
+					Enable_Negative := TRUE,
+					Override := 100);
+					
+fbSlave_Power (Axis := SLAVEAXIS,
+					Enable := bPowerSlave,
+					Enable_Positive := TRUE,
+					Enable_Negative := TRUE,
+					Override := 100);	
+
+ fbSlaveMoveAbsolute(Axis:=SLAVEAXIS, 
+						Execute := bSlaveMoveAbsolute, 
+						Position := SlaveAbsoluteValue, 
+						Velocity := 360, 
+						Acceleration := 4000, 
+						Deceleration := 4000,
+						Jerk := 0
+						);	
+
+
+fbSlaveMoveRelative(Axis:=SLAVEAXIS,
+					Execute := bSlaveMoveRelative,
+					Distance := SlaveDistance,
+					Velocity := 1300, 
+					Acceleration := 10000, 
+					Deceleration := 10000,
+					Jerk := 0,
+					BufferMode :=MC_BufferMode.MC_BlendingLow);
+					
+fbSlaveMoveRelative2(
+	Axis:=SLAVEAXIS , 
+	Execute:= bSlaveMoveRelative2 , 
+	Distance:=SlaveDistance2 , 
+	Velocity:=1200 , 
+	Acceleration:=9000 , 
+	Deceleration:=9000, 
+	Jerk:=0 , 
+	BufferMode:= MC_BufferMode.MC_BlendingLow , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+						
+fbCamIn(Master:=MASTERENCODER,Slave:=SLAVEAXIS,Execute:=bCAMIN, CamTableID :=iCamCableID,SlaveOffset := 0);
+
+
+			
+CASE iKorak OF 
+	-1:
+	iKorakRelativnegaPomika := 100;
+	bSlaveMoveAbsolute := FALSE;
+	bCAMOut := TRUE;
+	iKorak:=10;
+	goHome := FALSE;
+	
+	b_errorNiIzdelkaNaPrijemalu := FALSE;
+	
+	aktivacija2tockovnegaizvzema := FALSE;
+	bSistemVNacinuRocno := FALSE;
+	//VAKUM IN IZPIH 
+	bVakumON := TRUE;
+	bManualTurnOnIzpih := FALSE;
+	//
+	10:
+	bCAMOut := FALSE;
+	iKorak := 20;
+	
+	20://RESET ERROR
+	bResetMaster := TRUE;
+	bResetSlave := TRUE;
+	
+	IF fbMaster_Reset.Done AND fbSlave_Reset.done THEN
+		bResetMaster := FALSE;
+		bResetSlave := FALSE;
+		
+		iKorak := 30;	
+	END_IF;
+					
+	//iKorak := 30;
+	30://VKLOP MOTORJA				
+	
+	
+	IF NOT fbMaster_Power.ERROR AND NOT fbSlave_Power.ERROR THEN
+		bPowerMaster := TRUE;
+		bPowerSlave := TRUE;
+		
+		goHome := TRUE;
+		
+		IF SlaveHomming.Done THEN
+			iKorak := 40;
+		END_IF
+	END_IF;
+					
+	//iKorak := 40;
+	//40:
+	
+	
+	40:
+	  SlaveAbsoluteValue := 0;
+	  bSlaveMoveAbsolute := TRUE; 
+	  
+	 IF fbSlaveMoveAbsolute.Done THEN
+		
+		 bSlaveMoveAbsolute := FALSE;
+		 ikorak := 50; 
+	 END_IF
+	 //bMasterAbsoluteMove := FALSE;
+	 45:
+	 	SlaveDistance := 30;
+		bSlaveMoveRelative := TRUE;
+		
+		IF fbSlaveMoveRelative.Done THEN
+			bSlaveMoveRelative := FALSE;
+			ikorak := 50;
+		END_IF
+	 50:
+	 bMasterAbsoluteMove := FALSE;
+	 
+	 //skok na drugi progra
+	
+	 IF aktivacija2tockovnegaizvzema THEN
+		 iKorakRelativnegaPomika := -1;
+	 END_IF
+	 
+	 
+		IF r_MasterAngle > 0 AND r_MasterAngle < 40  AND FALSE THEN
+		bCAMIN := TRUE;
+		  IF  fbCamIn.InSync THEN
+		  ikorak := 60;
+		  bCAMIN := FALSE;
+		  END_IF
+		END_IF
+  
+		  
+	 
+	 60:
+	 // VKLOP IZPIHOVANJA
+	 IF (r_MasterAngle > 155 AND r_MasterAngle < 355)  THEN
+		 bVakumON := FALSE;
+     ELSIF  r_MasterAngle < 5 THEN
+		 bVakumON := TRUE;
+		 bManualTurnOnIzpih := TRUE;
+	 ELSE
+		 bVakumON := TRUE;
+		 bManualTurnOnIzpih := FALSE;
+	 END_IF
+	 
+	 IF NOT IO.bVakumOK AND (r_MasterAngle > 250 AND r_MasterAngle < 350) THEN
+		 b_errorNiIzdelkaNaPrijemalu := TRUE;
+ 	ELSE
+		b_errorNiIzdelkaNaPrijemalu := FALSE;
+	 END_IF
+	 
+
+	 
+END_CASE;
+
+
+CASE iKorakRelativnegaPomika OF
+	-1: //absolute move to 0
+	iKorak := 100;
+		//VAKUM IN IZPIH 
+	bVakumON := TRUE;
+	bManualTurnOnIzpih := FALSE;
+	
+	b_errorNiIzdelkaNaPrijemalu := FALSE;
+	
+	bSistemVNacinuRocno := TRUE;
+	
+	IF bSlaveMoveAbsolute THEN
+		bSlaveMoveAbsolute := FALSE;
+	ELSE
+		SlaveAbsoluteValue :=rZeroAbsolutePosition;
+ 		bSlaveMoveAbsolute := TRUE;
+	END_IF
+	
+	IF fbSlaveMoveAbsolute.Done THEN
+		bSlaveMoveAbsolute := FALSE;
+		iKorakRelativnegaPomika := -10;
+	END_IF
+	(*
+	
+	
+	*)
+	
+	-10: //distance move to 150° - cakanje na komad
+	IF bSlaveMoveRelative THEN 
+		bSlaveMoveRelative := FALSE;
+	ELSE
+		SlaveDistance := 141;
+		bSlaveMoveRelative := TRUE;	
+	END_IF
+	
+	IF fbSlaveMoveRelative.Done THEN
+		bSlaveMoveRelative := FALSE;	
+		iKorakRelativnegaPomika := 5;
+	END_IF
+	
+	5://move to 180ž
+	
+	IF bMoveRelative OR redgeTrigg.Q OR kotvkotu.Q THEN
+		SlaveDistance := 30;
+		bSlaveMoveRelative := TRUE;
+		//bVakumON := FALSE;
+		bVakumON := NOT  TRUE;
+	END_IF;
+	
+(*	IF fbSlaveMoveRelative.Busy THEN
+		bSlaveMoveRelative := FALSE;	
+		iKorakRelativnegaPomika := 10;
+	END_IF
+	
+	*)
+	
+	IF fbSlaveMoveRelative.Done THEN
+		bSlaveMoveRelative := FALSE;	
+		iKorakRelativnegaPomika := 10;
+		
+	END_IF
+	
+	10: //move to 0
+	//
+	IF kotvkotu2.Q THEN
+		//********		
+		//slavedistance := 150 + 180 := 330
+		//SlaveDistance := 330;
+		
+		//+++++
+		SlaveDistance := 180;
+		
+		bSlaveMoveRelative := TRUE;	
+	END_IF
+			
+
+	IF fbSlaveMoveRelative.Done THEN //nalaganje kosov na trak
+		bSlaveMoveRelative := FALSE;
+		
+		//**************
+		//preskoci 20 -> kar na 5
+		//iKorakRelativnegaPomika := 5;
+		
+		//++++++++++
+		iKorakRelativnegaPomika := 20;
+		
+		
+		//bVakumON := TRUE;
+        bIzpihON := TRUE;
+		bManualTurnOnIzpih:= TRUE;
+		bVakumON := NOT FALSE;
+	END_IF
+	
+	20:
+
+	SlaveDistance := 150;
+	bSlaveMoveRelative := TRUE;	
+	bIzpihON := FALSE;	
+	IF fbSlaveMoveRelative.Done THEN //pozicija za izvzemanje kosov
+		bSlaveMoveRelative := FALSE;
+		bMoveRelative := FALSE;
+		iKorakRelativnegaPomika := 5;
+				
+	END_IF
+	bManualTurnOnIzpih := FALSE;
+	
+END_CASE
+
+	IF fbMaster_Power.ERROR AND fbSlave_Power.ERROR THEN
+		bPowerMaster := FALSE;
+		bPowerSlave := FALSE;
+	END_IF;
+
+//VAKUM IN IZPIHOVANJE V NACINU
+IF bSistemVNacinuRocno  THEN
+// VKLOP IZPIHOVANJA
+	 IF (rAX5000Modulo > 145 AND rAX5000Modulo < 350)  THEN
+		 bVakumON := FALSE;
+     ELSIF  rAX5000Modulo < 20   THEN
+		 bVakumON := TRUE;
+		 bManualTurnOnIzpih := TRUE;
+	 ELSE
+		 bVakumON := TRUE;
+		 bManualTurnOnIzpih := FALSE;
+	 END_IF	
+END_IF;	
+IO.bVklopVakum :=  bVakumON ;//OR NOT(rAX5000Modulo>160);	
+IO.bVklopIzpih := bManualTurnOnIzpih ;//OR (rAX5000Modulo<3.0);
+
+//PulzeQ1(IN := bIzpihON, PT:= T#100MS, Q=>IO.bVklopIzpih);
+
+SlaveHomming(Axis:=SLAVEAXIS,Execute:=goHome, Position := 47,HomingMode:=MC_HomingMode.MC_DefaultHoming, bCalibrationCam := IO.bExternalCam);
+IF SlaveHomming.Done THEN
+	goHome := FALSE;
+END_IF
+
+
+
+//PRG_INIT();
+//ob pritisku na Init tipko gre v izhodisce
+initEdge(CLK:=IO.bInit);
+
+
+CASE init OF
+	0:
+		IF initEdge.Q AND (main.iKorak <> 50) THEN
+		iKorak := -1;
+		init := 10;
+		END_IF;
+		
+	10:
+		
+		IF (main.iKorak = 50) AND initEdge.Q THEN	
+			MAIN.iKorakRelativnegaPomika := -1;
+		END_IF
+	
+		IF iKorakRelativnegaPomika = 5 THEN
+			init := 0;
+		END_IF
+	
+END_CASE]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
