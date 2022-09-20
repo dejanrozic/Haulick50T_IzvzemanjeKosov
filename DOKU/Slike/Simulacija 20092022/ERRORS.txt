@@ -1,0 +1,11 @@
+DEC	18000	Monitoring "Drive hardware not ready to operate"
+DEC	17489 (0x4451) "Encoder counter overflow monitoring" The encoder'sincremental counter has overflowed. - Axis4 - HENGSTLER
+
+
+##JERNEJ VPRAŠANJA####
+- MASTER-SLAVE tabele ne delujejo (vrednosti so shranjene ampak jih me morem spreminjati?) -> ključek ni v PCju!!!!
+- COUPLING MODE - LINEAR (vse deluje OK, razen encoder counter overflow)
+- Kako se programsko omogoči linear coupling mode z MC_CamIn funkcijo? Coupling mode -> izberi Table -> Table ID. -Ponavadi javi napako!
+- Kako se aktivira točka za MC_CamIn (absolutna pozija master osi (enkoder)).
+-MC_CamIn (MC_StartMode)
+-MC_CamIN (St_CamInOptions -> kako vpisati parameter)
