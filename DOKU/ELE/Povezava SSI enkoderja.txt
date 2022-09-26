@@ -1,0 +1,7 @@
+Povezava VCC
+Kabel: AL-WAK8-10/s370
+1. wh, 2.bn, 3.gn, 4.ye 5.gy. 6pk.7bu.8rd
+Enkoder
+1.VCC 2. GND. 3NC 4.NCLC 5. DAT 6.CLC 7. NC 8.NDAT
+
+
