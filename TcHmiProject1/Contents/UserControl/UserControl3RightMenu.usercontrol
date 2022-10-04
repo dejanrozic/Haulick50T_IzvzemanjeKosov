@@ -1,0 +1,54 @@
+﻿<div id="UserControl3RightMenu" data-tchmi-type="tchmi-user-control" 
+     data-tchmi-top="0" data-tchmi-left="0" 
+     data-tchmi-width="137" data-tchmi-height="100" data-tchmi-width-unit="px" data-tchmi-height-unit="%"
+     data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="btnMotorOnOFF" data-tchmi-type="tchmi-button" data-tchmi-height="80" data-tchmi-height-unit="px" data-tchmi-left-unit="px" data-tchmi-text="MOTOR ON" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-top="10" data-tchmi-text-font-weight="Bold" data-tchmi-text-font-size="25">
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(61, 255, 0, 1)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+
+<div id="btnMotorNaprejNazaj" data-tchmi-type="tchmi-button" data-tchmi-height="80" data-tchmi-height-unit="px" data-tchmi-left-unit="px" data-tchmi-text="VRTENJE DESNO" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-top="100" data-tchmi-text-font-weight="Bold" data-tchmi-text-font-size="25" data-tchmi-right-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(61, 255, 0, 1)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+
+<div id="btnResetNapake" data-tchmi-type="tchmi-button" data-tchmi-height="80" data-tchmi-height-unit="px" data-tchmi-left-unit="px" data-tchmi-text="RESET NAPAKE" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="0" data-tchmi-text-font-weight="Bold" data-tchmi-text-font-size="25" data-tchmi-bottom="125" data-tchmi-bottom-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(255, 0, 0, 1)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+
+</div>

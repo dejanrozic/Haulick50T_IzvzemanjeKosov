@@ -1,0 +1,677 @@
+﻿<div id="Content7DigIzhodi" data-tchmi-type="tchmi-content" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="900" data-tchmi-height="1600" data-tchmi-creator-viewport-width="1600">
+
+<div id="Content5DigVhodi_2" data-tchmi-type="tchmi-content" data-tchmi-top="3" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="1200" data-tchmi-creator-viewport-height="800" data-tchmi-width-unit="%" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-height-unit="px" data-tchmi-height-mode="Content">
+
+<div id="DigitalniIzhodiTitle" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="DIGITALNI IZHODI" data-tchmi-top="6" data-tchmi-top-unit="px" data-tchmi-width="214" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold" data-tchmi-text-font-size="22">
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#1_10" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="IZHOD#1" data-tchmi-top="70" data-tchmi-top-unit="px" data-tchmi-width="140" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#2_12" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="IZHOD#2" data-tchmi-top="106" data-tchmi-top-unit="px" data-tchmi-width="140" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiCombobox_8" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="220" data-tchmi-left-unit="px" data-tchmi-top="70" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-text="" data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "OFF\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "ON"
+  }
+]
+</script>
+</div>
+
+<div id="TcHmiCombobox_9" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="220" data-tchmi-left-unit="px" data-tchmi-top="106" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px"  data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "OFF\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "ON"
+  }
+]
+</script>
+</div>
+
+<div id="IzhodiNumber" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="OZNAKA IZHODA" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="174" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Normal" data-tchmi-text-font-size="20">
+
+</div>
+
+<div id="Stevec1_Title_16" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="220" data-tchmi-left-unit="px" data-tchmi-text="ON/OFF" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Normal" data-tchmi-text-font-size="20" data-tchmi-text-font-size-unit="px">
+
+</div>
+
+<div id="TcHmiCombobox_10" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="335" data-tchmi-left-unit="px" data-tchmi-top="70" data-tchmi-top-unit="px" data-tchmi-width="102" data-tchmi-width-unit="px"  data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "KOT-KOT\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "KOT-ČAS"
+  }
+]
+</script>
+</div>
+
+<div id="Stevec1_Title_17" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="335" data-tchmi-left-unit="px" data-tchmi-text="FUNKCIJA" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="102" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Normal" data-tchmi-text-font-size="20" data-tchmi-text-font-size-unit="px">
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#2_13" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="IZHOD#3" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="140" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiCombobox_12" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="220" data-tchmi-left-unit="px" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px"  data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "OFF\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "ON"
+  }
+]
+</script>
+</div>
+
+<div id="TcHmiTextbox_VHOD#2_14" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="IZHOD#4" data-tchmi-top="178" data-tchmi-top-unit="px" data-tchmi-width="140" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiCombobox_14" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="220" data-tchmi-left-unit="px" data-tchmi-top="178" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px"  data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "OFF\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "ON"
+  }
+]
+</script>
+</div>
+
+<div id="Stevec1_Title_18" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="460" data-tchmi-left-unit="px" data-tchmi-text="START [°]" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Normal" data-tchmi-text-font-size="20" data-tchmi-text-font-size-unit="px">
+
+</div>
+
+<div id="Stevec1_Title_19" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="564" data-tchmi-left-unit="px" data-tchmi-text="STOP [°]" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Normal" data-tchmi-text-font-size="20" data-tchmi-text-font-size-unit="px">
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#1_StartAngle_11" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="460" data-tchmi-left-unit="px" data-tchmi-text="0" data-tchmi-top="70" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#1_StopAngle_11" data-tchmi-type="tchmi-textbox" data-tchmi-height="24" data-tchmi-height-unit="px" data-tchmi-left="564" data-tchmi-left-unit="px" data-tchmi-text="180" data-tchmi-top="72" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#2_StartAngle_15" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="460" data-tchmi-left-unit="px" data-tchmi-text="180" data-tchmi-top="106" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#2_StopAngle_15" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="564" data-tchmi-left-unit="px" data-tchmi-text="270" data-tchmi-top="106" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#3_StartAngle_10" data-tchmi-type="tchmi-textbox" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="460" data-tchmi-left-unit="px" data-tchmi-text="180" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#3_StopAngle_10" data-tchmi-type="tchmi-textbox" data-tchmi-height="24" data-tchmi-height-unit="px" data-tchmi-left="564" data-tchmi-left-unit="px" data-tchmi-text="270" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#4_StartAngle_10" data-tchmi-type="tchmi-textbox" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="460" data-tchmi-left-unit="px" data-tchmi-text="180" data-tchmi-top="175" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#4_StopAngle_10" data-tchmi-type="tchmi-textbox" data-tchmi-height="24" data-tchmi-height-unit="px" data-tchmi-left="564" data-tchmi-left-unit="px" data-tchmi-text="270" data-tchmi-top="175" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiRectangle_StatusInput1_5" data-tchmi-type="tchmi-rectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="165" data-tchmi-left-unit="px" data-tchmi-top="72" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 0.0,
+  "topRight": 0.0,
+  "bottomLeft": 0.0,
+  "bottomRight": 0.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+
+<div id="TcHmiRectangle_StatusInput2_5" data-tchmi-type="tchmi-rectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="165" data-tchmi-left-unit="px" data-tchmi-top="108" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 0.0,
+  "topRight": 0.0,
+  "bottomLeft": 0.0,
+  "bottomRight": 0.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+
+<div id="TcHmiRectangle_StatusInput3_6" data-tchmi-type="tchmi-rectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="164" data-tchmi-left-unit="px" data-tchmi-top="145" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 0.0,
+  "topRight": 0.0,
+  "bottomLeft": 0.0,
+  "bottomRight": 0.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 255, 0, 1)"
+}
+</script>
+</div>
+
+<div id="TcHmiRectangle_StatusInput3_7" data-tchmi-type="tchmi-rectangle" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="164" data-tchmi-left-unit="px" data-tchmi-top="180" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="px">
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 0.0,
+  "topRight": 0.0,
+  "bottomLeft": 0.0,
+  "bottomRight": 0.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(30, 255, 0, 1)"
+}
+</script>
+</div>
+
+<div id="TcHmiCombobox_15" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="335" data-tchmi-left-unit="px" data-tchmi-top="108" data-tchmi-top-unit="px" data-tchmi-width="102" data-tchmi-width-unit="px"  data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "KOT-KOT\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "KOT-ČAS"
+  }
+]
+</script>
+</div>
+
+<div id="TcHmiCombobox_16" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="335" data-tchmi-left-unit="px" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="102" data-tchmi-width-unit="px"  data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "KOT-KOT\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "KOT-ČAS"
+  }
+]
+</script>
+</div>
+
+<div id="TcHmiCombobox_17" data-tchmi-type="tchmi-combobox" data-tchmi-combobox-text="IZBERI" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="335" data-tchmi-left-unit="px" data-tchmi-top="174" data-tchmi-top-unit="px" data-tchmi-width="102" data-tchmi-width-unit="px"  data-tchmi-text-font-size-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0,
+    "value": "0",
+    "text": "KOT-KOT\t\t"
+  },
+  {
+    "id": 1,
+    "value": "1",
+    "text": "KOT-ČAS"
+  }
+]
+</script>
+</div>
+
+<div id="Stevec1_Title_20" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="673" data-tchmi-left-unit="px" data-tchmi-text="DYN. t [mS]" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Normal" data-tchmi-text-font-size="20" data-tchmi-text-font-size-unit="px">
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#1_dyntime" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="668" data-tchmi-left-unit="px" data-tchmi-text="20" data-tchmi-top="67" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#2_dyntime" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="668" data-tchmi-left-unit="px" data-tchmi-text="20" data-tchmi-top="102" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#3_dyntime" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="668" data-tchmi-left-unit="px" data-tchmi-text="180" data-tchmi-top="141" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#4_dyntime" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="668" data-tchmi-left-unit="px" data-tchmi-text="50" data-tchmi-top="174" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="Stevec1_Title_26" data-tchmi-type="tchmi-textblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="775" data-tchmi-left-unit="px" data-tchmi-text="KORAK" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="105" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Normal" data-tchmi-text-font-size="20" data-tchmi-text-font-size-unit="px">
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#1_korak" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="774" data-tchmi-left-unit="px" data-tchmi-text="1" data-tchmi-top="68" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#2_korak" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="775" data-tchmi-left-unit="px" data-tchmi-text="1" data-tchmi-top="103" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#3_korak" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="775" data-tchmi-left-unit="px" data-tchmi-text="1" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+<div id="TcHmiTextbox_VHOD#4_korak" data-tchmi-type="tchmi-textbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="775" data-tchmi-left-unit="px" data-tchmi-text="1" data-tchmi-top="175" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-text-font-size="20">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+</div>
+
+<div id="TcHmiGrid_5" data-tchmi-type="tchmi-grid" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="858" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 0.1960784)"
+}
+</script>
+</div>
+
+</div>

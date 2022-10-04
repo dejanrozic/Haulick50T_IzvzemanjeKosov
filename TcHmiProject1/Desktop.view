@@ -1,0 +1,63 @@
+﻿<div id="Desktop" data-tchmi-type="tchmi-view"
+     data-tchmi-top="0" data-tchmi-left="0"
+     data-tchmi-width-mode="Content"
+     data-tchmi-min-width="100" data-tchmi-min-width-unit="%"
+     data-tchmi-height-mode="Content"
+     data-tchmi-min-height="100" data-tchmi-min-height-unit="%"
+     data-tchmi-background-image=""
+     data-tchmi-background-image-height="100" data-tchmi-background-image-width="100"
+     data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width-unit="%" data-tchmi-width="1280" data-tchmi-height="645" data-tchmi-creator-viewport-width="1280" data-tchmi-creator-viewport-height="800" data-tchmi-zindex="1">
+
+<div id="TcHmiRegionMAIN" data-tchmi-type="tchmi-region" data-tchmi-height="67.3" data-tchmi-height-unit="%" data-tchmi-left="256" data-tchmi-left-unit="px" data-tchmi-top="100" data-tchmi-top-unit="px" data-tchmi-width="68.8" data-tchmi-width-unit="%" data-tchmi-zindex="3" data-tchmi-scrolling="Yes">
+
+</div>
+
+<div id="UserControl2TopMenu_1" data-tchmi-type="tchmi-user-control-host" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Contents/UserControl/UserControl2TopMenu.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-zindex="1">
+
+</div>
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(207, 206, 206, 1)"
+}
+</script>
+<div id="TcHmiContainerBottomMenu" data-tchmi-type="tchmi-container" data-tchmi-height="200" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width="1280" data-tchmi-width-unit="px" data-tchmi-max-width="1280" data-tchmi-max-height="150" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+</div>
+
+<div id="UserControl3RightMenu_1" data-tchmi-type="tchmi-user-control-host" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left-unit="px" data-tchmi-target-user-control="Contents/UserControl/UserControl3RightMenu.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="137" data-tchmi-width-unit="px" data-tchmi-right="5" data-tchmi-top="100" data-tchmi-zindex="1">
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 1,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "Solid",
+  "right": "None",
+  "top": "None",
+  "bottom": "None"
+}
+</script>
+</div>
+
+<div id="UserControl1_1" data-tchmi-type="tchmi-user-control-host" data-tchmi-height="130" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="Contents/UserControl/UserControl1.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-bottom="-11" data-tchmi-zindex="1">
+
+</div>
+
+<div id="TcHmiImage_1" data-tchmi-type="tchmi-image" data-tchmi-height="65" data-tchmi-height-unit="%" data-tchmi-left="1" data-tchmi-left-unit="%" data-tchmi-src="Images/HAULIC_32T.png" data-tchmi-top-unit="px" data-tchmi-width="25" data-tchmi-width-unit="%" data-tchmi-bottom="20" data-tchmi-bottom-unit="%" data-tchmi-zindex="0">
+
+</div>
+
+</div>

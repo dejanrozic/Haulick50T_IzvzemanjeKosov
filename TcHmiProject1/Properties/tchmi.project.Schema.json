@@ -1,0 +1,37 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Contents_UserControl_BTNs_UserControl_btnMainControl": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "tchmi-user-control-host",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\BTNs\\UserControl_btnMainControl.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Contents_UserControl_BTNs_UserControl_btnMainControl"
+    },
+    "Contents_UserControl_UserControl1": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "tchmi-user-control-host",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\UserControl1.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Contents_UserControl_UserControl1"
+    },
+    "Contents_UserControl_UserControl2TopMenu": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "tchmi-user-control-host",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\UserControl2TopMenu.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Contents_UserControl_UserControl2TopMenu"
+    },
+    "Contents_UserControl_UserControl3RightMenu": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "tchmi-user-control-host",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\UserControl\\UserControl3RightMenu.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Contents_UserControl_UserControl3RightMenu"
+    }
+  }
+}

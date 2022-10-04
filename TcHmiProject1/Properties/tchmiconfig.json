@@ -1,0 +1,104 @@
+﻿{
+  "$schema": "C:/TwinCAT/Functions/TE2000-HMI-Engineering/Infrastructure/TcHmiFramework/Latest/Schema/TchmiConfig.Schema.json",
+  "basePath": "./Libraries",
+  "locale": "client",
+  "scaleMode": "None",
+  "startupView": "Desktop.view",
+  "loginPage": null,
+  "tcHmiServer": {
+    "websocketIntervalTime": 500,
+    "websocketTimeout": 10000,
+    "websocketSubscriptionMode": "Change"
+  },
+  "activeTheme": "Base",
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/Style.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    }
+  },
+  "dependencyFiles": [
+    {
+      "name": "Fonts/Fonts.css",
+      "description": "",
+      "type": "Stylesheet"
+    }
+  ],
+  "userControls": [
+    {
+      "url": "Contents/UserControl/BTNs/UserControl_btnMainControl.usercontrol"
+    },
+    {
+      "url": "Contents/UserControl/UserControl1.usercontrol"
+    },
+    {
+      "url": "Contents/UserControl/UserControl2TopMenu.usercontrol"
+    },
+    {
+      "url": "Contents/UserControl/UserControl3RightMenu.usercontrol"
+    }
+  ],
+  "content": [
+    {
+      "url": "Contents/Content1Stevec.content",
+      "preload": false
+    },
+    {
+      "url": "Contents/Content2Pah.content",
+      "preload": false
+    },
+    {
+      "url": "Contents/Content3Podajalna.content",
+      "preload": false
+    },
+    {
+      "url": "Contents/Content4Hod.content",
+      "preload": false
+    },
+    {
+      "url": "Contents/Content5DigVhodi.content",
+      "preload": false
+    },
+    {
+      "url": "Contents/Content6AnalVhodi.content",
+      "preload": false
+    },
+    {
+      "url": "Contents/Content7DigIzhodi.content",
+      "preload": false
+    }
+  ],
+  "views": [
+    {
+      "url": "Desktop.view",
+      "preload": false
+    }
+  ],
+  "userFunctions": [],
+  "symbols": {
+    "internal": {}
+  },
+  "trigger": [],
+  "actionTemplates": [],
+  "languages": {
+    "de-DE": "Localization\\de-DE.localization",
+    "en-US": "Localization\\en-US.localization"
+  },
+  "creatorSettings": {
+    "viewport": {
+      "defaultWidth": 1024,
+      "defaultHeight": 768
+    }
+  }
+}
